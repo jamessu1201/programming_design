@@ -5,13 +5,13 @@
 bool visited[5];
 
 void dfs(int graph[][5],int start,int n){
-    int stack[n];
-    int bottom=-1;
+    int stack[n];   
+    int bottom=-1;  //initiate everything
     int result[n],p=0;
     memset(result,0,n*sizeof(result[0]));
     stack[++bottom]=start;
     visited[start]=true;
-    while(bottom>=0){
+    while(bottom>=0){   //while stack is not empty
         int pop=stack[bottom--];
         result[p++]=pop;
         for(int i=0;i<n;i++){
@@ -34,7 +34,7 @@ void dfs_recursion(int graph[][5],int vertex,int n){
     printf("%d ",vertex);
     for(int i=0;i<n;i++){
         if(graph[vertex][i]==1&&visited[i]==false){
-            dfs_recursion(graph,i,n);
+            dfs_recursion(graph,i,n);   //put i in stack
         }
     }
 }

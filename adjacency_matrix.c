@@ -5,13 +5,13 @@
 int main(){
     int n;
     scanf("%d",&n); //5
-    int **graph=(int**)malloc(n*sizeof(int*));
+    int **graph=(int**)malloc(n*sizeof(int*)); //generate the matrix 
     for(int i=0;i<n;i++){
         graph[i]=(int*)malloc(n*sizeof(int));
         memset(graph[i],0,n*sizeof(graph[i]));
     }
     int a,b;
-    for(int i=0;i<6;i++){
+    for(int i=0;i<6;i++){  //link start
         scanf("%d %d",&a,&b);
         graph[a][b]=1;
         graph[b][a]=1;

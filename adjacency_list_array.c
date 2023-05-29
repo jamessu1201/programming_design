@@ -13,7 +13,7 @@ int main(){
     int *size=(int*)malloc(n*sizeof(int)); //every list's size
     memset(size,0,n*sizeof(size));
     int a,b;
-    for(int i=0;i<6;i++){
+    for(int i=0;i<6;i++){  //link start
         scanf("%d %d",&a,&b);
         graph[a][size[a]++]=b;
         graph[b][size[b]++]=a;

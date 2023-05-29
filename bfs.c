@@ -5,15 +5,15 @@
 void bfs(int graph[][5],int start,int n){
     int queue[n];
     bool visited[n];
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++){ //initiate everything
         visited[i]=false;
     }
-    int front=-1,rear=-1;
+    int front=-1,rear=-1;   
     int result[n],p=0;
     memset(result,0,n*sizeof(result[0]));
-    queue[++rear]=start;
+    queue[++rear]=start;    //put start in queue
     visited[start]=true;
-    while(front!=rear){
+    while(front!=rear){     //while queue is not empty
         int vertex=queue[++front];
         result[p++]=vertex;
         for(int i=0;i<5;i++){

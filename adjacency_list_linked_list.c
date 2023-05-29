@@ -21,14 +21,14 @@ void add_edge(Vertex *graph[],int a,int b){
 int main(){
     int n;
     scanf("%d",&n); //5
-    Vertex *graph[n];
-    for(int i=0;i<n;i++){
+    Vertex *graph[n]; //vertexs lists
+    for(int i=0;i<n;i++){   //the head is vertex itself
         graph[i]=(Vertex*)malloc(sizeof(Vertex));
         graph[i]->vertex=i;
         graph[i]->next=NULL;
     }
     int a,b;
-    for(int i=0;i<6;i++){
+    for(int i=0;i<6;i++){ //link start
         scanf("%d %d",&a,&b);
         add_edge(graph,a,b);
         add_edge(graph,b,a);
